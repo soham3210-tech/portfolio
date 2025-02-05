@@ -202,6 +202,12 @@ position: relative;
         margin-top: 4rem;
     }
 }
+@media (max-width: 600px) {
+    nav {
+      visibility: hidden;
+    }
+  }
+  
 
 
 
