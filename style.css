@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+text-decoration: none;
+border:none;
+font-family:Poppins,sans-serif ;
+
+}html{
+    font-size: 63%;
+   
+}
+body{
+    width:100%;
+    height: 100vh;
+    overflow-x:hidden;
+    background-color:black;
+    color: wheat;
+}
+header{
+    margin-top:20px ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pad: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 3rem;
+    color: rgb(182, 47, 47);
+    font-weight: 800;
+    cursor: pointer;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3 ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,nav a.active{
+    color: rgb(151, 54, 54);
+    border-bottom:3px solid rgb(175, 61, 61);
+}
+section{
+    min-height:100vh;
+    padding: 5rem 9% 5rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+.home-image img{
+    border-radius:120%;
+}
+.home .home-content h1{
+
+font-size: 4rem;
+font-weight: 250;
+line-height: 1.6;
+}
+span{
+    color: rgb(175, 61, 61);
+}
+.home-image img{
+    position: relative;
+    width: 27vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid rgb(151, 36, 36);
+    cursor: pointer;
+}
+.home-image image:hover{
+
+font-size: 1.8rem;
+font-weight: 500;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+border: 0.2rem solid rgb(161, 50, 50);
+border-radius: 50%;
+margin: 3rem 1.5rem 3rem 0;
+transition:0.3s ease ;
+
+}
+.social-icons a:hover{
+    color: black;
+   transform: scale(1.2) translateY(-5px);
+   background-color:rgb(178, 51, 51) ;
+   box-shadow: 0 0 25px solid rgb(151, 36, 36);
+   
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: black;
+    color:rgb(194, 64, 64);
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    font-weight: 500;
+    border: 2px solid rgb(182, 69, 69);
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border-radius: 4rem;
+}
+.btn:hover{
+    transform:scale3d(1.4);
+    background-color: rgb(182, 69, 69);
+    color: black;
+    box-shadow: 0 0 25px solid rgb(151, 36, 36);
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 500;
+  min-width: 280px;
+
+}
+
+.typing-text span{
+position: relative;
+ }
+.typing-text span::before{
+    content: "software developer";
+    color: rgb(193, 85, 85);
+    animation: words 20s infinite;
+}
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.9s infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "CS Student";
+    }
+    21%, 40%{
+        content: "Developer";
+    }
+    41%, 60%{
+        content: "Web Designer";
+    }
+    61%, 80%{
+        content: "Learner";
+    }
+    81%, 100%{
+        content: "ML Enthusiast";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 4rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
