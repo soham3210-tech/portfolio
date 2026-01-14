@@ -13,18 +13,19 @@
 
 <body>
   <header>
-    <a href="#" class="logo">Soham</a>
+    <a href="#home" class="logo">Soham</a>
     <nav>
       <a href="#home" class="active">Home</a>
-      <a href="services.html" target="_blank">Services</a>
-      <a href="skills.html"target="_blank">Skills</a>
-      <a href="education.html"target="_blank">Education</a>
-      <a href="experience.html" target="_blank">Experience</a>
-      <a href="contact.html"target="_blank">Contact</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="home">
+
+  <section id="home" class="home">
     <div class="home-image">
       <img src="sohamphoto.jpg" alt="" />
     </div>
@@ -53,6 +54,178 @@
       <a href="#" class="btn">Hire me</a>
     </div>
   </section>
+
+
+
+
+  <!-- service -->
+
+  <section id="services">
+    <div class="section-container">
+      <h2>My DevOps & Machine Learning Services</h2>
+      <div class="service-description">
+        <p>I specialize in offering a range of services that bridge the gap between software development and operational
+          excellence while also providing advanced machine learning solutions to solve real-world problems.</p>
+        <p>My expertise lies in creating robust pipelines, automating workflows, and ensuring that your systems are
+          scalable, reliable, and efficient.</p>
+      </div>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>DevOps Consulting</h3>
+          <ul>
+            <li>CI/CD pipelines</li>
+            <li>Infrastructure as Code</li>
+            <li>Cloud Infrastructure (AWS, Azure, GCP)</li>
+            <li>Monitoring & Logging</li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h3>Machine Learning Solutions</h3>
+          <ul>
+            <li>Supervised & Unsupervised Learning</li>
+            <li>Natural Language Processing (NLP)</li>
+            <li>Deep Learning (TensorFlow, PyTorch)</li>
+            <li>Data Preprocessing & Feature Engineering</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- skills -->
+
+  <section id="skills">
+    <div class="section-container">
+      <h2>My Skills</h2>
+      <div class="skills-list">
+        <div class="skill-item">
+          <h3>Artificial Intelligence (AI)</h3>
+          <ul>
+            <li>Natural Language Processing (NLP)</li>
+            <li>Computer Vision</li>
+            <li>Reinforcement Learning</li>
+            <li>TensorFlow & PyTorch</li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3>DevOps</h3>
+          <ul>
+            <li>CI/CD</li>
+            <li>Docker & Kubernetes</li>
+            <li>Terraform & Ansible</li>
+            <li>AWS, GCP, Azure</li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3>Machine Learning (ML)</h3>
+          <ul>
+            <li>Supervised & Unsupervised Learning</li>
+            <li>Data Preprocessing & Feature Engineering</li>
+            <li>Scikit-learn, TensorFlow, PyTorch</li>
+            <li>Deep Learning (CNNs, RNNs)</li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3>Web Design</h3>
+          <ul>
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>Responsive Design</li>
+            <li>UX/UI Design Principles</li>
+            <li>Front-End Frameworks (React, Vue)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!--education-->
+  <section id="education">
+    <div class="section-container">
+      <h2>My Education</h2>
+      <p>Education
+
+        2025 – Present: BSc CSIT, College Name
+        Currently in 3rd semester, learning programming, web development, and computer fundamentals.
+
+        2023 – 2025: 12th Science, School Name
+        Graduated with 3.77 GPA, majoring in Physics, Chemistry, and Mathematics.</p>
+    </div>
+  </section>
+
+  <!-- ===== Experience ===== -->
+  <section id="experience">
+    <div class="section-container">
+      <h2>My Professional Experience</h2>
+      <div class="experience-list">
+        <div class="experience-item">
+          <h3>Senior Web Developer</h3>
+          <p>Tech Innovations Inc. | March 2020 - Present</p>
+        </div>
+        <div class="experience-item">
+          <h3>Frontend Developer</h3>
+          <p>Creative Web Solutions | June 2017 - Feb 2020</p>
+        </div>
+        <div class="experience-item">
+          <h3>Intern, Web Development</h3>
+          <p>Future Web Solutions | Jan 2016 - May 2017</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <div class="section-container">
+      <div>
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:sohamthapaliya@gmail.com">sohamthapaliya@gmail.com</a></p>
+        <p>Phone: 9767932964</p>
+      </div>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!--js-->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
 </body>
 
 </html>
